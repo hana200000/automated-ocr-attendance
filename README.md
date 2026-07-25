@@ -69,8 +69,6 @@ python main.py
 3. Select an Operation Mode
 Upon launching, the interactive CLI will prompt you with the following menu:
 
-Plaintext
---- OCR Attendance System (No Duplicates + Status) ---
 [INFO] Loaded 3 students.
 
 1. Process Single Image
