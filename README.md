@@ -77,18 +77,13 @@ Plaintext
 2. Process Batch Folder (All images in folder)
 3. Manual ID Entry (Override)
 4. Exit
+
 Option 1: Enter the relative or absolute path to a single ID image (e.g., images/id_1001.jpg).
 
 Option 2: Enter the folder path containing multiple student ID images (e.g., batch_attendance/) for rapid automated logging.
 
 Option 3: Manually type a student ID to mark attendance without image verification.
 
-📂 Project Structure
-Plaintext
-├── main.py              # Core CLI application, OpenCV preprocessing & OCR pipeline
-├── roster.csv           # Registered student database (ID, Name)
-├── attendance.csv       # Automatically generated output log (ID, Name, Time, Status)
-└── README.md            # Project documentation
 🏆 Acknowledgments & Program Details
 This project was built and presented as part of the Access Control & Authentication Systems Track.
 
