@@ -1,6 +1,10 @@
 # 🎓 OCR-Based Automated Attendance System
 
-An automated, smart attendance management solution developed as the final capstone project for the **Access Control & Authentication Systems Program** presented by Google Developer Groups (GDG) Aden, Women Techmakers (WTM), and Technovation.
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![Tesseract OCR](https://img.shields.io/badge/Tesseract-OCR%20Engine-20232A?style=for-the-badge&logo=google&logoColor=white)
+
+An automated, smart attendance management solution developed as the final capstone project for the **Access Control & Authentication Systems Program** presented by **Google Developer Groups (GDG) Aden**, **Women Techmakers (WTM)**, and **Technovation**.
 
 This system leverages Computer Vision and Optical Character Recognition (OCR) to automate student identification from document images or ID cards, seamlessly verifying rosters, logging timestamps, and actively preventing duplicate entries.
 
@@ -20,77 +24,86 @@ This system leverages Computer Vision and Optical Character Recognition (OCR) to
 
 ---
 
-## 🛠️ Tech Stack & Libraries
+## Tech Stack & Libraries
 
 * **Language:** Python 3.x
 * **Computer Vision:** OpenCV (`opencv-python`)
 * **OCR Engine:** Tesseract OCR (`pytesseract`)
-* **Data Handling:** Native Python `csv`, `os`, and `datetime` modules
+* **Data Handling:** Native Python modules (`csv`, `os`, and `datetime`)
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
-You must have Python installed along with the required libraries:
-```bash 
+Ensure you have Python installed, then install the required Python libraries using pip:
+
+```bash
 pip install opencv-python pytesseract
 ```
-2. Install Tesseract OCR Engine
-Windows: Download and install Tesseract from the official Windows binaries.
 
-Note: The default installation path configured in the script is C:\Program Files\Tesseract-OCR\tesseract.exe. If you install it elsewhere, update the TESSERACT_PATH variable in the script.
+### 2. Install Tesseract OCR Engine
 
-Linux (Debian/Ubuntu):
+* **Windows:** 
+  Download and install Tesseract from the official Windows binaries.  
+  > **Note:** The default installation path configured in the script is `C:\Program Files\Tesseract-OCR\tesseract.exe`. If you install it elsewhere, make sure to update the `TESSERACT_PATH` variable in your script.
 
-```bash
-sudo apt update
-sudo apt install tesseract-ocr
-macOS:
-```
-```bash
-brew install tesseract
-```
-🚀 Usage Instructions
-1. Prepare Your Roster
-Create a file named roster.csv in the project root directory with the following structure:
+* **Linux (Debian/Ubuntu):**
+  ```bash
+  sudo apt update
+  sudo apt install tesseract-ocr
+  ```
 
-Code snippet
+* **macOS:**
+  ```bash
+  brew install tesseract
+  ```
+
+---
+
+## Usage Instructions
+
+### 1. Prepare Your Roster
+Create a file named `roster.csv` in the project root directory with the following format:
+
+```csv
 ID,Name
 1001,Ahmed Mohamed
 1002,Sarah Ali
 1003,John Doe
-2. Run the Application
+```
+
+### 2. Run the Application
 Execute the main script from your terminal:
 
-```Bash
+```bash
 python main.py
 ```
-3. Select an Operation Mode
+
+### 3. Select an Operation Mode
 Upon launching, the interactive CLI will prompt you with the following menu:
 
+```text
 1. Process Single Image
 2. Process Batch Folder (All images in folder)
 3. Manual ID Entry (Override)
 4. Exit
+```
 
-Option 1: Enter the relative or absolute path to a single ID image (e.g., images/id_1001.jpg).
+* **Option 1:** Enter the relative or absolute path to a single ID image (e.g., `images/id_1001.jpg`).
+* **Option 2:** Enter the folder path containing multiple student ID images (e.g., `batch_attendance/`) for rapid automated logging.
+* **Option 3:** Manually type a student ID to mark attendance without image verification.
 
-Option 2: Enter the folder path containing multiple student ID images (e.g., batch_attendance/) for rapid automated logging.
+---
 
-Option 3: Manually type a student ID to mark attendance without image verification.
+## 🏆 Acknowledgments & Program Details
 
-🏆 Acknowledgments & Program Details
-This project was built and presented as part of the Access Control & Authentication Systems Track.
+This project was built and presented as part of the **Access Control & Authentication Systems Track**.
 
-Speaker & Mentor: Nuha Jadu
+* **Speaker & Mentor:** Nuha Jadu
+* **Program Judge:** Mazen Othman
 
-Program Judge: Mazen Othman
-
-Supporting Communities:
-
-Women Techmakers (WTM)
-
-Technovation
-
-Google Developer Groups (GDG) Aden
+**Supporting Communities:**
+* [Women Techmakers (WTM)](https://www.womentechmakers.com/)
+* [Technovation](https://www.technovation.org/)
+* [Google Developer Groups (GDG) Aden](https://gdg.community.dev/)
